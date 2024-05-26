@@ -1,4 +1,4 @@
-async function fetchData(method, link, token, bodyData) {
+async function fetchData(method, link, bodyData, token) {
   try {
     headers = {
       'Content-Type': 'application/json'
