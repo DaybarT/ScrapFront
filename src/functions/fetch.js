@@ -1,6 +1,6 @@
-async function fetchData(method, link, bodyData, token) {
+export default async function fetchData(method, link, bodyData, token) {
   try {
-    headers = {
+    const headers = {
       'Content-Type': 'application/json'
     }
 
@@ -25,7 +25,7 @@ async function fetchData(method, link, bodyData, token) {
 
     const data = await response.json()
 
-    console.log(data)
+    return data;
   } catch (error) {
     console.error('Hubo un problema con la solicitud:', error)
   }
