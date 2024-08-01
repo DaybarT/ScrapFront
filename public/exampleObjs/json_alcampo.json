@@ -1,7 +1,23 @@
 [
     {
         "producto": "MAHOU CLASICA Cervezas pack de 12 latas de 33 centilitros",
+        "disponible": false,
+        "precio": "6.79",
+        "precio_litro": "1.71",
+        "imagen": "https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/28369924-1272-4a22-8ee3-b90a4c5f8885/300x300.jpg",
+        "url": "https://www.compraonline.alcampo.es/products/34870"
+    },
+    {
+        "producto": "MAHOU CLASICA Cervezas pack de 12 latas de 33 centilitros",
         "disponible": true,
+        "precio": "6.79",
+        "precio_litro": "1.71",
+        "imagen": "https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/28369924-1272-4a22-8ee3-b90a4c5f8885/300x300.jpg",
+        "url": "https://www.compraonline.alcampo.es/products/34870"
+    },
+    {
+        "producto": "MAHOU CLASICA Cervezas pack de 12 latas de 33 centilitros",
+        "disponible": false,
         "precio": "6.79",
         "precio_litro": "1.71",
         "imagen": "https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/28369924-1272-4a22-8ee3-b90a4c5f8885/300x300.jpg",
