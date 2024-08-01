@@ -1,19 +1,15 @@
 <script setup>
-import { ref } from 'vue'; // Importa los composables necesarios
+import { useProductStore } from '@/Pinia';
 import 'primeicons/primeicons.css'
-import fetchData from '/src/functions/fetch.js';
 
+const store = useProductStore();
 
-const data = ref([]);
 const fetchProducts = async (event) => {
-    event.preventDefault();
-    // let shop = document.getElementById('shop').textContent;
-    try {
-    data.value = await fetchData('GET', '/public/exampleObjs/json_alcampo.json');
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
-}
+  event.preventDefault();
+  let shop = document.getElementById('shop').textContent;
+  console.log(shop);
+  await store.fetchProducts(shop);
+};
 
     </script>
 

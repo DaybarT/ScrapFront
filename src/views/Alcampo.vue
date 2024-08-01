@@ -1,29 +1,37 @@
 <script setup>
+import { useProductStore } from '@/Pinia';
 import 'primeicons/primeicons.css';
 
+const store = useProductStore();
 </script>
 
 <template>
-  <p hidden id="shop">Alcampo</p>
-  <div class="product" v-for="(item, index) in data" :key="index">
-    <table>
-      <tr>
-        <td>
-          <p style="font-weight: bold;">{{ item.producto }}</p>
-          <p>Disponible: 
-            <i class="pi pi-check-circle" v-if="item.disponible" style="color: green;"></i>
-            <i class="pi pi-times-circle" v-else style="color: red;"></i>
-          </p>
-          <p>{{ item.precio }}<i class="pi pi-euro" style="font-size: 12px;"></i></p>
-          <p><i class="pi pi-euro" style="font-size: 12px;"></i>{{ item.precio_litro }}/L</p>
-        </td>
-        <td>
-          <a :href="item.url" target="_blank"><img :src="item.imagen" alt="imagen" height="100px"></a>
-        </td>
-      </tr>
-    </table>
+  <p hidden id="shop">alcampo</p>
+  <div v-for="(source, sourceIndex) in store.data" :key="sourceIndex">
+    <template v-if="source.source === 'alcampo'">
+      <div class="product" v-for="(item, itemIndex) in source.items" :key="itemIndex">
+        <table>
+          <tr>
+            <td>
+              <p style="font-weight: bold;">{{ item.producto }}</p>
+              <p>Disponible: 
+                <i class="pi pi-check-circle" v-if="item.disponible" style="color: green;"></i>
+                <i class="pi pi-times-circle" v-else style="color: red;"></i>
+              </p>
+              <p>{{ item.precio }}<i class="pi pi-euro" style="font-size: 12px;"></i></p>
+              <p><i class="pi pi-euro" style="font-size: 12px;"></i>{{ item.precio_litro }}/L</p>
+            </td>
+            <td>
+              <a :href="item.url" target="_blank"><img :src="item.imagen" alt="imagen" height="100px"></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </template>
   </div>
 </template>
+
+
 
 <style lang="css" scoped>
 .product {
