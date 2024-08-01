@@ -1,11 +1,6 @@
 <template>
-    <main>
-      <ul>
-        <!-- <li v-for="(item, index) in data" :key="index">
-          <pre>{{ item.producto }}</pre>
-        </li> -->
-      </ul>
-    </main>
+      <p hidden id="shop">Eci</p>
+
   </template>
   
 <script>
