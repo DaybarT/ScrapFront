@@ -6,7 +6,8 @@ const store = useProductStore();
 </script>
 
 <template>
-  <p hidden id="shop">alcampo</p>
+  <!-- toLower -->
+  <p hidden id="shop">alcampo</p> 
   <div v-for="(source, sourceIndex) in store.data" :key="sourceIndex">
     <template v-if="source.source === 'alcampo'">
       <div class="product" v-for="(item, itemIndex) in source.items" :key="itemIndex">

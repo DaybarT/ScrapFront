@@ -4,7 +4,7 @@ import 'primeicons/primeicons.css'
 </script>
 <template>
     <nav>
-        <RouterLink to="/">
+        <RouterLink to="/home">
             <span class="pi pi-home"></span>
         </RouterLink>
         <RouterLink to="/carrefour">
