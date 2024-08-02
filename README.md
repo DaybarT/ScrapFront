@@ -7,9 +7,11 @@ ScrapFront unicamente se encarga de mostrar los objetos que recoge del backend p
 
 Recordar que esta aplicación se ha creado únicamente con fines educativos para aprender y experimentar con dichas tecnologías.
 
-Vue.JS
-Pinia
-primeicons
+Vue.JS -> https://vuejs.org/
+
+Pinia -> https://pinia.vuejs.org/
+
+primeicons -> https://primevue.org/icons/
 
 
 ## Instalar dependencias
