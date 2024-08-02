@@ -19,7 +19,7 @@ Pinia -> https://pinia.vuejs.org/
 Primeicons -> https://primevue.org/icons/
 
 
-## Instalar dependencias
+## Setup
 
 ```sh
 npm install
