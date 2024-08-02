@@ -1,35 +1,32 @@
 # ScrapFront
 
-This template should help get you started developing with Vue 3 in Vite.
+Desarrollado en Vue 3. 
 
-## Recommended IDE Setup
+Aplicación frontend para consumir ScrapBack.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Esta aplicación ha sido desarrollada con el único propósito de aprender y experimentar con Vue.js y Pinia. 
 
-## Customize configuration
+No está diseñada para su uso en producción ni ofrece garantías de estabilidad.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+ScrapFront unicamente se encarga de mostrar los objetos que recoge del backend para guardarlos en una store global (Pinia API), y mostrarlo en pantalla para comparar precios de productos de una forma mas "cómoda".
 
-## Project Setup
+Recordar que esta aplicación se ha creado únicamente con fines educativos para aprender y experimentar con dichas tecnologías.
+
+Vue.JS -> https://vuejs.org/
+
+Pinia -> https://pinia.vuejs.org/
+
+Primeicons -> https://primevue.org/icons/
+
+
+## Setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compilación y reload activo para desarollo.
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
