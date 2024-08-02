@@ -8,6 +8,8 @@ const store = useProductStore();
 <template>
   <!-- toLower -->
   <p hidden id="shop">alcampo</p> 
+  <div class="container">
+
   <div v-for="(source, sourceIndex) in store.data.filter(source => source.source === 'alcampo')" :key="sourceIndex" class="caja">
   <div class="product" v-for="(item, itemIndex) in source.items" :key="itemIndex">
     <table>
@@ -28,6 +30,7 @@ const store = useProductStore();
     </table>
   </div>
 </div>
+</div>
 
 </template>
 
@@ -41,12 +44,23 @@ const store = useProductStore();
   margin: 5px;
   align-items: center;
   align-content: center;
-  
+  width: 300px;
 }
 img {
   border-radius: 10px;
 }
-.caja{
+.container {
   display: flex;
+  flex-wrap: wrap; /* Asegura que los elementos se envuelvan si es necesario */
+  justify-content: center; 
+  align-items: flex-start; 
+  margin-top: 100px;
 }
+.caja {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 </style>
