@@ -1,7 +1,9 @@
 # ScrapFront
 
 Desarrollado en Vue 3. 
+
 Aplicación frontend para consumir ScrapBack.
+
 Esta aplicación ha sido desarrollada con el único propósito de aprender y experimentar con Vue.js y Pinia. No está diseñada para su uso en producción ni ofrece garantías de estabilidad.
 ScrapFront unicamente se encarga de mostrar los objetos que recoge del backend para guardarlos en una store global (Pinia API), y mostrarlo en pantalla para comparar precios de productos de una forma mas "cómoda".
 
@@ -11,7 +13,7 @@ Vue.JS -> https://vuejs.org/
 
 Pinia -> https://pinia.vuejs.org/
 
-primeicons -> https://primevue.org/icons/
+Primeicons -> https://primevue.org/icons/
 
 
 ## Instalar dependencias
