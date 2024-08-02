@@ -38,7 +38,7 @@ const store = useProductStore();
 .product {
   border: 2px solid;
   border-radius: 10px;
-  border-color: hsla(160, 100%, 37%, 1);
+  box-shadow: 0 0 8px  hsla(160, 100%, 37%, 1);
   margin: 5px;
   align-items: center;
   align-content: center;
