@@ -8,28 +8,27 @@ const store = useProductStore();
 <template>
   <!-- toLower -->
   <p hidden id="shop">alcampo</p> 
-  <div v-for="(source, sourceIndex) in store.data" :key="sourceIndex">
-    <template v-if="source.source === 'alcampo'">
-      <div class="product" v-for="(item, itemIndex) in source.items" :key="itemIndex">
-        <table>
-          <tr>
-            <td>
-              <p style="font-weight: bold;">{{ item.producto }}</p>
-              <p>Disponible: 
-                <i class="pi pi-check-circle" v-if="item.disponible" style="color: green;"></i>
-                <i class="pi pi-times-circle" v-else style="color: red;"></i>
-              </p>
-              <p>{{ item.precio }}<i class="pi pi-euro" style="font-size: 12px;"></i></p>
-              <p><i class="pi pi-euro" style="font-size: 12px;"></i>{{ item.precio_litro }}/L</p>
-            </td>
-            <td>
-              <a :href="item.url" target="_blank"><img :src="item.imagen" alt="imagen" height="100px"></a>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </template>
+  <div v-for="(source, sourceIndex) in store.data.filter(source => source.source === 'alcampo')" :key="sourceIndex" class="caja">
+  <div class="product" v-for="(item, itemIndex) in source.items" :key="itemIndex">
+    <table>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">{{ item.producto }}</p>
+          <p>Disponible: 
+            <i class="pi pi-check-circle" v-if="item.disponible" style="color: green;"></i>
+            <i class="pi pi-times-circle" v-else style="color: red;"></i>
+          </p>
+          <p>{{ item.precio }}<i class="pi pi-euro" style="font-size: 12px;"></i></p>
+          <p><i class="pi pi-euro" style="font-size: 12px;"></i>{{ item.precio_litro }}/L</p>
+        </td>
+        <td>
+          <a :href="item.url" target="_blank"><img :src="item.imagen" alt="imagen" height="100px"></a>
+        </td>
+      </tr>
+    </table>
   </div>
+</div>
+
 </template>
 
 
@@ -42,8 +41,12 @@ const store = useProductStore();
   margin: 5px;
   align-items: center;
   align-content: center;
+  
 }
 img {
   border-radius: 10px;
+}
+.caja{
+  display: flex;
 }
 </style>

@@ -7,23 +7,21 @@ const store = useProductStore();
 
 <template>
   <p hidden id="shop">eci</p>
-  <div v-for="(source, sourceIndex) in store.data" :key="sourceIndex">
-    <template v-if="source.source === 'eci'">
-      <div class="product" v-for="(item, itemIndex) in source.items" :key="itemIndex">
-        <table>
-          <tr>
-            <td>
-              <p style="font-weight: bold;">{{ item.product_name }}</p>
-              <p>{{ item.product_price_final }}<i class="pi pi-euro" style="font-size: 12px;"></i></p>
-            </td>
-            <td>
-              <a :href="item.url_to_buy" target="_blank"><img :src="item.imagen_src" alt="imagen" height="100px"></a>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </template>
+  <div v-for="(source, sourceIndex) in store.data.filter(source => source.source === 'eci')" :key="sourceIndex" class="container">
+  <div class="product" v-for="(item, itemIndex) in source.items" :key="itemIndex">
+    <table>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">{{ item.product_name }}</p>
+          <p>{{ item.product_price_final }}<i class="pi pi-euro" style="font-size: 12px;"></i></p>
+        </td>
+        <td>
+          <a :href="item.url_to_buy" target="_blank"><img :src="item.imagen_src" alt="imagen" height="100px"></a>
+        </td>
+      </tr>
+    </table>
   </div>
+</div>
 </template>
 
 

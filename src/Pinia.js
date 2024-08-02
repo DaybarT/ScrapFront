@@ -22,14 +22,14 @@ export const useProductStore = defineStore('productStore', {
     ]
   }),
   actions: {
-    async fetchProducts(shop) {
+    async fetchProducts(shop,producto) {
       try {
         const shopItem = this.data.find(item => item.source === shop);
         if (shopItem) {
           shopItem.items = [];
         }
 
-        const shopData = await fetchData('GET', `/public/exampleObjs/json_${shop}.json`);
+        const shopData = await fetchData('GET', `http://192.168.1.65:9000/${shop}/${producto}`);
         
         // Actualiza el array data con los nuevos datos obtenidos
         if (shopItem) {

@@ -7,8 +7,9 @@ const store = useProductStore();
 const fetchProducts = async (event) => {
   event.preventDefault();
   let shop = document.getElementById('shop').textContent;
-  console.log(shop);
-  await store.fetchProducts(shop);
+  let producto = document.getElementById('search').value;
+
+  await store.fetchProducts(shop,producto);
 };
 
     </script>
@@ -16,7 +17,7 @@ const fetchProducts = async (event) => {
 <template>
     <form @submit.prevent="fetchProducts">
         <div class="searcher">
-            <input type="search" id="search">
+            <input type="text" id="search">
             <button type="submit" id="go">Buscar</button>
         </div>
     </form>
